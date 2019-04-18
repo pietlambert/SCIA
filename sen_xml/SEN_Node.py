@@ -13,9 +13,10 @@ class SEN_Node:
     @classmethod
     def Add(cls, NodeName, X, Y, Z):
         cls.data.append([NodeName, X, Y, Z])
+
     @classmethod
     def ReturnXMLs(cls):
-        if (len(cls.data)==0):
+        if (len(cls.data) == 0):
             return [False, "", ""]
 
         import sen_xml._sen_xml_helper as gv
@@ -31,6 +32,7 @@ class SEN_Node:
         tt = t_table.format(to)
         tc = t_container.replace("{0}", tt)
         return [True, tc, tdef]
+
 
 if __name__ == "__main__":
     pass

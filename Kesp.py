@@ -1,6 +1,11 @@
 import math
 import gvTools_SEN_XML as gvXML
 
+class Model:
+
+    def __init__(self, name'model'):
+        self.name = name
+
 
 class Kesp:
 

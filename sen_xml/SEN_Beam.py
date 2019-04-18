@@ -24,18 +24,22 @@ class SEN_Beam:
     @classmethod
     def Add(cls, BeamName, Node1, Node2, CSSnr):
         cls.data_Line.append([BeamName, Node1, Node2, CSSnr])
+
     @classmethod
     def Add_Line(cls, BeamName, Node1, Node2, CSSnr):
         cls.data_Line.append([BeamName, Node1, Node2, CSSnr])
+
     @classmethod
     def Add_Arc(cls, BeamName, Node1, Node2, Node3, CSSnr):
         cls.data_Arc.append([BeamName, Node1, Node2, Node3, CSSnr])
+
     @classmethod
     def Add_Parabola(cls, BeamName, Node1, Node2, Node3, CSSnr):
         cls.data_Parabola.append([BeamName, Node1, Node2, Node3, CSSnr])
+
     @classmethod
     def ReturnXMLs(cls):
-        if (len(cls.data_Line)==0 and len(cls.data_Arc)==0 and len(cls.data_Parabola==0)):
+        if (len(cls.data_Line) == 0 and len(cls.data_Arc) == 0 and len(cls.data_Parabola == 0)):
             return [False, "", ""]
 
         import sen_xml._sen_xml_helper as gv
@@ -57,6 +61,7 @@ class SEN_Beam:
         tt = t_table.format(to)
         tc = t_container.replace("{0}", tt)
         return [True, tc, tdef]
+
 
 if __name__ == "__main__":
     pass
